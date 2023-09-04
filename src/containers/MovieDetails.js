@@ -31,7 +31,7 @@ const MovieDetails = ({navigation, route}) => {
       </ImageBackground>
       <Text style={styles.title}>{movie?.title}</Text>
       <Text style={styles.date}>{movie?.release_date}</Text>
-      <View style={styles.view}>
+      <View style={styles.view(insets)}>
         <Text style={styles.overviewTitle}>Overview</Text>
         <Text style={styles.overview}>{movie?.overview}</Text>
       </View>
@@ -75,9 +75,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 8,
   },
-  view: {
-    marginLeft: 16,
-  },
+  view: insets => ({
+    padding: insets.left + 24,
+  }),
   overviewTitle: {
     color: '#ffff',
     fontWeight: '600',
