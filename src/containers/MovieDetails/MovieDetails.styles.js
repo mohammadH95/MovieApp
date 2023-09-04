@@ -48,4 +48,13 @@ export default StyleSheet.create({
     fontWeight: '500',
     fontSize: 14,
   },
+  voteView: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+  },
+  starIcon: (star, voteAverage) => ({
+    width: 24,
+    height: 24,
+    tintColor: star <= voteAverage ? 'gold' : null,
+  }),
 });
