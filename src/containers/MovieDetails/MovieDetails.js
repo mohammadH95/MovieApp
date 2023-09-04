@@ -1,18 +1,16 @@
 import React from 'react';
 import {
-  Dimensions,
   Image,
   ImageBackground,
-  StyleSheet,
   Text,
   TouchableOpacity,
   View,
-  I18nManager,
 } from 'react-native';
-import Container from '../components/Container';
+import {Container} from '../../components';
 import LinearGradient from 'react-native-linear-gradient';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {BackIcon, IMG_URL, colors} from '../constant';
+import {BackIcon, IMG_URL, colors} from '../../constant';
+import styles from './MovieDetails.styles';
 
 const MovieDetails = ({navigation, route}) => {
   const insets = useSafeAreaInsets();
@@ -40,53 +38,3 @@ const MovieDetails = ({navigation, route}) => {
 };
 
 export default MovieDetails;
-
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: 0,
-    paddingLeft: 0,
-    paddingRight: 0,
-  },
-  image: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height * 0.4,
-  },
-  backIcon: insets => ({
-    marginTop: insets.top + 16,
-    marginLeft: insets.left + 16,
-    width: 30,
-    height: 30,
-    transform: I18nManager?.isRTL ? [{rotate: '180deg'}] : [{rotate: '0deg'}],
-  }),
-  gradient: {
-    flex: 1,
-  },
-  title: {
-    color: '#ffff',
-    textAlign: 'center',
-    fontWeight: '600',
-    fontSize: 24,
-    marginBottom: 4,
-  },
-  date: {
-    color: '#A0A0A0',
-    fontWeight: '500',
-    fontSize: 14,
-    textAlign: 'center',
-    marginBottom: 8,
-  },
-  view: insets => ({
-    padding: insets.left + 24,
-  }),
-  overviewTitle: {
-    color: '#ffff',
-    fontWeight: '600',
-    fontSize: 24,
-    marginBottom: 8,
-  },
-  overview: {
-    color: '#A0A0A0',
-    fontWeight: '500',
-    fontSize: 14,
-  },
-});

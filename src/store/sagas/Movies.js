@@ -6,12 +6,12 @@ import {
   FETCH_MOVIES_LIST,
 } from '../actions/Movies';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {bearerToken} from '../../constant';
 
 const config = {
   headers: {
     Accept: 'application/json',
-    Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NzRlMGQ2MzQzOTM3MjFhNGY0YzQ5ZmQ2NjdkNTJiMiIsInN1YiI6IjY0ZjJhNjIyMWYzMzE5MDEzYTI1OTU3ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dTQkh2-cQddYsGde-_QNzcIPj_MR2k0OzDM-Sonxp5Q',
+    Authorization: bearerToken,
   },
 };
 

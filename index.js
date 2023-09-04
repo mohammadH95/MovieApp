@@ -5,12 +5,11 @@
 import React from 'react';
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
-import MoviesList from './src/containers/MoviesList';
+import {MoviesList, MovieDetails} from './src/containers';
 import {Provider} from 'react-redux';
 import store from './src/store/store';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import MovieDetails from './src/containers/MovieDetails';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 if (__DEV__) {

@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
-import {FlatList, StyleSheet, Text} from 'react-native';
+import {FlatList, Text} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {moviesListFetch} from '../store/actions/Movies';
-import MovieItem from '../components/MovieItem';
+import {moviesListFetch} from '../../store/actions/Movies';
+import {MovieItem, Container} from '../../components';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Container from '../components/Container';
+import styles from './MoviesList.styles';
 
 const MoviesList = ({navigation}) => {
   const dispatch = useDispatch();
@@ -37,21 +37,3 @@ const MoviesList = ({navigation}) => {
 };
 
 export default MoviesList;
-
-const styles = StyleSheet.create({
-  title: {
-    color: '#ffff',
-    fontWeight: '600',
-    fontSize: 24,
-    marginBottom: 24,
-  },
-  columnWrapperStyle: {
-    justifyContent: 'space-between',
-  },
-  image: {
-    width: 178,
-    height: 264,
-    backgroundColor: 'red',
-    borderRadius: 23,
-  },
-});
